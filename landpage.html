@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: #e16849;
+            padding: 20px 0;
+            color: rgb(128, 16, 16);
+            text-align: center;
+        }
+        
+        header .logo {
+            float: left;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        header nav ul {
+            list-style: none;
+            float: right;
+        }
+        
+        header nav ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+        
+        header nav ul li a {
+            text-decoration: none;
+            color: rgb(248, 219, 219);
+        }
+        
+        header .contact-info {
+            clear: both;
+            margin-top: 10px;
+            text-align: right;
+        }
+        
+        header .contact-info .button {
+            background: #9e4319;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .hero img {
+            width: 100%; /* Make sure the image covers the full width */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(5, 5, 30);
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+        }
+        
+        .hero h2 {
+            font-size: 24px;
+            font-weight: normal;
+        }
+        
+        .hero p {
+            margin: 20px 0;
+        }
+        
+        .hero-buttons .button {
+            background: #ee8d67;
+            color: rgb(15, 2, 2);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        
+        .about, .services {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .services .service {
+            display: inline-block;
+            width: 30%;
+            margin: 0 2%;
+            padding: 20px;
+            background: #e86868;
+            border-radius: 5px;
+        }
+        
+        footer {
+            background: #d02929;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Landing Page</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <p>+123-456-7890 | demo@example.com</p>
+                <a href="#" class="button">Request a Consult</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <!-- Add the image tag here -->
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUQEBIVEBISDxUVEBAPFRUVEBUPFRUWFhUVFRYYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFxAQGi0lHSItLS0tLS0tLSstLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0rLSsrLS0tKy0rLS0tLf/AABEIAKwBJAMBIgACEQEDEQH/xAAbAAADAQEBAQEAAAAAAAAAAAAAAQIDBAUGB//EADsQAAEDAgQDBQcCBAYDAAAAAAEAAhEDIQQSMUEFUWETInGBkQYyobHB0fAjUjNCYuEUFVNykrIWJIL/xAAZAQEBAQEBAQAAAAAAAAAAAAAAAQIDBAX/xAAhEQEBAQACAwEAAgMAAAAAAAAAARECIQMSMUEiMhNhcf/aAAwDAQACEQMRAD8A/Yv8OQZBkcilmaJDrH80VYN7iwF2p58lpUYHCCJW2MedWfa3Nc1NpLoaJnUcjz8Ftj8M5olvebvzHiu3AYbIJPvEX6DktbkYy2vGxQIMxBFnDopp1xa9ivcx+E7RtoDosTp4HovhwXtqltSxbMtOx/Ct8P5Rjn/GvscDxAE5HaGzSfkV2tIp2Jhpd3Z0BOy+PbXjqvpOGVTWpFtQTtm2cOY6hY58Mb4c96ejVJg5dYtK8Z2RwcXglxmNc2m3K69HBvImm67m/wAx/mbsfosMdTDTnA943/3LPFrl3NcOHpsbBqWHLW/XmtbOJIBDQbdfsFzOYSZOn5ZbsqkCAuljnK72jYD0VQs2O3V9oVhs4ThLOnmUUwmpBTlBYTUtcqBUU0QjMiUU0IQqGFSkFUFKUJpJqAQhCBoQhRoJpJoBCEIBCEIPN/xbe8AZLZzNBGa19E6+JysL4JAEwF8vxXA1KcunM397dRP7tx4rXgXtF3Wsrm2UAVOVv5vuu/8Aj/Y4e/5Xr8P4yHkMd3Xn3b2d4dei9PN0XyXtTwl2Xt8Po272N2GudkfJd3srx3/EMyPP6rBf+pv7h9UvDr2hx53cr6DN0XzvtVTpmHD+MIGUXJZ1+i09p+IVaTW9nDWOMOqavDtmgbSN+my8zDVABcWc03d70nWT+eavDjf7J5Oc/q6fZ/h7Xkl5Byn+GD/2P0C+qbawAAGgC+M4TiDTqWEQYcOYX2IduFPJLp4rMZYoEfqAS5nXVu4WjwHtjZwsfkVUrnwpyl1PYGW/7D9iubo89jTdpFwVJXXjmQ4O/cIPiPz4LmeN10nblenWw2HgrBWVLQeC0BWW9UCqClMKKaaGhOEDBVSpIQFFaBPLbVSEwFFU0IScEQiqATSATQMIRCFAJpIQUEJIUaNNSmgaEIQCEIQeHi+IU6QBqHKCYEg6n6L5fi3CcrO1pXYCc7BoBJ7zen5ovY45wsV2yDFRo7pOhH7T914/srxQsccNVsM5DM2rXbtPQ/PxXq4zO48vK71Xq+yj62Tvj9KP0pnPM3j+lebxPhTsPiGV8M2A99h/K151bA2cJ+PRfVgoqMDmlrhLTrsZBkEHYqTll0vHZjXGYZtSnlcDDhcHUHUehXy1KiWuLCLgx59F9U6paAIC8bjbIIeLTZx3nUfX0U8e/DyZe3n1jHuDvaE9OXj1Xt8DxWZmU3LfkfwryHMzDx+a0wpLDmBgkQ6OS6cuOxznKy6+kdUi5sOZhY1nQWP2mCf6Xf3heNWaSc2p5m9l6WHOelHIEeY0+i53hnbp77cd1amHAg2i+y80H0XbRfLQeYXnxEjkYU4xeXL47sNTEQTp1CmVnR0V5Spi70oFaMiyxlEphrepANlMrbBgQeanEgA2Wf3Gs60UgDM2RKyBVAq4asFU1ZrSk+DdKsqjCQScZMpSoutAU5WcolTDWkolWxnNKozcKLhSnKzBTlMI0lEqJRKYutJRKiU5TBcolRKJUxVyhRKEwfK+zOJdVaabjLqYHeO7TpPWy6XcBY6qa7mguOXuk92RbMRudPRfKYR76Tw9jnAjWCbidD0X6PSptLQQTlc0EXPjPxXp8u8L/wBeXxWc5jyONU6jaT+ydlqBhc0gA6XIv0lfOeydaqauao8v7Vsd4kmQZafmPNfV4iA8NL8zi2Ym+UGNOS+KweCdTrNaH5QzEAAEmID4F1eHcrPPqx93Ubl1IHUmAsOI4YupOPISPJcntHhSWtOYyHa3mCCI+AXfw9uaiwl0gtEiTHI/Jc/klb+2zHk4KhI8Fo6iReLHnzX0VPDsaIa0DwXNiMKCNd/7Kzy7VviyPMo0pttt0K6MAzKXDqCtThQ0xO3mnRYJ8tVby2MTjlGFFiOTiPjP1VnDD3o1So0xmd4g+oWxpW1+yxb26cZ0gMSLbJliQaOe6Kxa1ddDDiJO65a1MNMTsuik/K0GQU5fOk4/e2dZmUwCllU1TJkq+zGUGfsgMqcKYCvsxEz5IQBNTARZBUpSlZEhQVKAVsyiIusXCDCmt5jqp1Ad1NWoNFzhyeZT1X2PMtGsKylbtrCEqxnKJSc5EqorMiVMq6eqijMiVs/Rc8qTtVSmplCuD89OHX0vDQezpibZYjaxt8l43Z2mV7lGkWtYJNotbcFe7y/HzPBe683h/DyMROaQA7XWLiPgvP4pwV5q1HjR1QQIMXgTK9rBYF7ahe502NwbyTpceK9fshlnMZ5W+y5cueV2nD2nbz+N4eaRHVpnzCvg1L9Js7T/ANiup+Ga8Q9xi24Gi0wOGhggkiT6SVi8v443OF9tbBx0Seyyii8EkE+CWebdVjG96TkTpNutmUxuVIZdXUz9VRYC4+AWlWkBokylqZWT3gakrP2t/J2pzUjSUteDoVvRYPwpeiduU0L6pdlaV21aLT08CuPIOe/NWctZ5ccINVdnaVdNjdz8VLWjrE8yrqYg8hqdOnUpihpFj+7eTrPNW+mASW3kCRPLl9l003NyyNIWbyWcdvbBrbwdY8vJVkWfYmcxtPujkPuU8qLOvxYZ1SydVlSqNddpDoMGOavKiyyt2PIssy3fmkylK0bSymTop8a+p7PmjKtqhELDL0SUvQhUxkqcoVCo1ol0NEgSeaUmfoe2EldSCmKKmrjNNBaiFQF07oAQAqZqoqhT6pq7IWdrWPmeH8PL4c4gAHRdVYxuLELooYgU25YsNysMIe1LjsNvzdeq8rbbfj5/Hjx4ycZ9pVKsAmRYLDBYzOcpgHcjS3Ra4+oASwXgrowZZkBDYOhMX633T5x3F7vPJfiqjWuEE6FdFGs1rYnQLMvSxFYZQIvN1yvfTv8ANrKjTzSRoqbZb4XFtAgoqVg7QXlXbvxPWZ9DSOacj8Cqm8bhbCkI+qzbjc465Q7W5usMQbzfRdBkWWLzJg+S1GL8YtiZErqpVQNJ66rmYYPzWhMXCt7SdOh9aefoVm4DkfQptKcrM6avaGuHX0WjOd4Gsjb0WZXXSAc2PUJyuJxmuVmJY/vMJI0kDceSGkTMHWT48z1SoUgxz3ZQ3MdBFwBEmFRcnX4S2zb9XUrT+74KMwIggkbi2iWZV2gTGt0qLGNcXBpkgCYGg/PgiejvgtGVhfdSKoUXprQ/+vUfdOsbaO9R91lnvZcPFWvqAZTodNJPOeiTjvI5c84uzyd6j7p+Tv8Al/dKg0hoDjmIFzzK0QifI/8AL+68vi9J85oJYNL6Hrf4r1oTWuHL1us8+HvMcXDabwzvz/SJuB6/BdzX9D/y/ukhZ5XbrfCeswOvtHmfoqMQBHxSQs40UDl81ToIiNEoRCKnIOQQryoQeNiqLnQG6b6eqoMLGkNBmPVehTqgE2uU6QuPqu3vXlnim7L28SnTLotrqV31TlEAbR5L0KoAbcR4LnYZIMTBT/J7E8Xp1vbLBkgGR4aK2kPdl0A3ttyXbTdJ0WVfDgRlWPbt19MnTCoMhIAkJ0qmltFdJ0TImUMdEW0QkVn6Km1iNkZ5OiG6+Cy0RebmFBdpbRbmp0WMKwsZVASZhJp2IXQGo5GNFdT1YscW2hasaTZNxlFJ2VSkge0t21Uh5/Ctaj5WYCT4Wd9DMeSloWjfBU0osgpU5mVL2bWWmYpaqbWsjMM6IFPoFs2Rsgc01PVAHRLItSiFNXGeVMK8qMqaYSJThEKKRShXCIQTCYCcJwikhNCBIVQkg80M8lrK7BRELnc266e2uM8fq52yTfYrpawaFZzEpzulSdOmoyBaywLzvdMOlQ+6zI6Wp7W/3TCMnRU2n5eCrKmlaOYQE6bN9fgnWdbzWd7dJOmJKAUZSgKsqa+ENvZJNphFW6hyWUytzVWCkL/oFCT0NMqothOyAUNdCYUU7lATBIRCgoEonZIFNFEJhEoQO6UpyhFIoTQoCEJoRSRCYRCBQnCaIU0JCaaK5+0MLFxTd+XU3/CusjhbWcX126K2jr8kiDPl+bKmAq1JFNBQJCsBBCzreFJKfREJgKKpjoQ56UIUaOVllPOfFaIKpjP1+aYuqAQWpqCEZUZevrdBnl6IMypLY0Whv49bJAKpimqgFAELUKKRTlEJwoFCpATUUQhNCKSE00MKEQmmoYUITQikmhCAQhCAQhCDlKmFUKg1dNcsZQrhPKqhTVkSFSUKg1RShCohINRRCcJgJ5UVKlWQkGoiYThPKnCGJRCqE8qhiC1Q6lyt4aei2hOE0xzCeh+Cpr41t4/fRWWJ5VRQQAoa3y8LKwDznxUU4RCWbmPqmCouBNJNAIQhAJoQgEIQgEIQgEIQgEIQgSE0IEmhCAQhCAQhCAQhCAQhCDmx2MFJoc4EguDe7Fp/mcSQGtHMleZhPaNjhD2PbUy5soAgtL2U2lpzaEvGsaHpPr16DXiHta8SDDwHCRoYO6ydw+kYJpUyWkFpLGyCNCLWhB5OG9pwQ1z6FVmcU8oYG1Sc9M1DZhJgAa+G9ltU9oRAy0qjicpaD2bczXVm0paS68F0xyiYkLu/yyh/o0rRA7NlsslsW2Lnep5qnYCkdaVM9zLdjT3JzZdNJAMc0HmVvaRkPFNj3PbRdVa0hoBpNBioTm90m0e90XW3jDCynUAcRVJDAAAYaHFziCRAAaTBvtE2Wx4ZQOtGkZcXGabPfNi7TXqrdgaR1pMPezXY335Jzaay5xnqeaDzP/J6Z0p1SYBIDWSA4Ncw+9HeDmnzvC9J2MBaSwZiKQe3NLGODpyjORG19SJEi4RTwFJtm0qbRyaxoHyWz6LS3IWgsLcpYQMuXSI0iNkHzY9rDMdhcnJ77v4+fL2f8PWLx739K6W8fqFuZtAH9AVAO1Mgw0ljgGEh13wBJOQ2C9L/ACyh/oUvcyfw2fw9cunu9Ev8ow9//Xo94AO/SZ3gIABteMrfQckHnO9onQXdkABldJdUtQc1xNU5aRGXux3c2omFJ9pwXOaynmyB7zmcWE4djmtNRoLO8S4uygGCG6gmF6x4bRMzRpmXBxljbuGjjbUSb9UDh1GZ7GnOfPORs9qP59Pe66oOtCEIBCEIBCEIBCEIBCEIBCEIBCEIP//Z" alt="Hero Image">
+
+            <div class="hero-content">
+                <h2>We Are Creative</h2>
+                <h1>Creative Digital Agency</h1>
+                <p>Our commitment to excellence drives us to create expectional user experience...</p>
+                <div class="hero-buttons">
+                    <a href="#" class="button">Read More</a>
+                    <a href="#" class="button">Request a Consult</a>
+                </div>
+            </div>
+       
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>15 years, we passionate about achieving better results for our clients.</p>
+            <p>We are leading company delivering innovative solutions across industries.</p>
+            <a href="#" class="button">Read More</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service">
+                <h3>User Experience</h3>
+                <p> Enjoy an intuitive and seamless experience designed to inspire and engage effortlessly.</p>
+            </div>
+            <div class="service">
+                <h3>Creative Design</h3>
+                <p>creative designs push boundaries, blending innovation with aesthetic perfection.</p>
+            </div>
+            <div class="service">
+                <h3>Retina Ready</h3>
+                <p> Ensure stunning visual clarity on every device down to the finest detail.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Landing Page. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js">
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
